@@ -14,7 +14,7 @@
     "es",
     "lib"
   ],
-  "repository": "https://github.com/kleros/flex-stepper",
+  "repository": "https://github.com/kleros/flex-react-stepper",
   "author": "Kleros",
   "license": "MIT",
   "private": false,
