@@ -1,6 +1,6 @@
 {
   "name": "flex-react-stepper",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A flex react stepper.",
   "keywords": ["react", "reactjs", "react-component", "flex", "stepper"],
   "main": "lib/index.js",
