@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import stylePropType from 'react-style-proptype'
 
 import './stepper.css'
 
@@ -13,7 +14,14 @@ import './stepper.css'
  * @param {string} styleLine - Style of the line between step boxes.
  * @returns {ReactElement} - Stepper generated
  */
-const Stepper = ({ steps, activeStep, className, styleComponent, styleStep, styleLine }) => {
+const Stepper = ({
+  steps,
+  activeStep,
+  className,
+  styleComponent,
+  styleStep,
+  styleLine
+}) => {
   const stepsLines = steps.reduce((r, a) => r.concat(a, false), [])
   stepsLines.pop()
   return (
@@ -51,15 +59,15 @@ Stepper.propTypes = {
 
   // Modifiers
   className: PropTypes.string,
-  style: PropTypes.object,
-  styleStep: PropTypes.object,
-  styleLine: PropTypes.object
+  styleComponent: stylePropType,
+  styleStep: stylePropType,
+  styleLine: stylePropType
 }
 
 Stepper.defaultProps = {
   // Modifiers
   className: '',
-  style: {},
+  styleComponent: {},
   styleStep: {},
   styleLine: {}
 }

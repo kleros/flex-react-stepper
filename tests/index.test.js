@@ -1,24 +1,23 @@
 import expect from 'expect'
 import React from 'react'
-import {render} from 'react-dom'
+import { render } from 'react-dom'
 
-import Stepper from '../src/index'
+import Stepper from '../src'
 
 describe('ProductTable component', () => {
   let node
-  beforeEach(() => { node = document.createElement('div') })
+  beforeEach(() => {
+    node = document.createElement('div')
+  })
 
   it('Stepper', () => {
-    render(<Stepper
-      steps={[
-        'Title',
-        'Address PartyB',
-        'Payment',
-        'Email',
-        'Description'
-      ]}
-      activeStep={1}
-    />, node)
+    render(
+      <Stepper
+        steps={['Title', 'Address PartyB', 'Payment', 'Email', 'Description']}
+        activeStep={1}
+      />,
+      node
+    )
     expect(node.textContent)
       .toContain('Title')
       .toContain('Address PartyB')
